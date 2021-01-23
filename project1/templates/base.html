@@ -41,8 +41,8 @@
               <li class="active"><a href="/">首页 <span class="sr-only">(current)</span></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              {% if user %}
-              <li><a href="#">{{ user["email"] }}</a></li>
+              {% if 'user' in session %}
+              <li><a href="#">{{ session["user"] }}</a></li>
               <li><a href="{{ url_for('logout') }}">退出</a></li>
               {% else %}
               <li><a href="{{ url_for('regist') }}">注册</a></li>
